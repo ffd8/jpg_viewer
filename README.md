@@ -3,11 +3,9 @@
 simple jpg viewer specifically for os x 10.10+,<br>
 because apple started censoring jpg glitches.
 
-_COMPILE<br>
-compiled using openframeworks 0.8.4, xcode 6.1, os x 10.9.5
-
 _DOWNLOAD<br>
-a compiled binary sits under releases
+a compiled binary sits under releases<br>
+compiled using openframeworks 0.8.4, xcode 6.1, os x 10.9.5
 
 _USE<br>
 open up first, drag + drop jpg over window, start glitching away with your favorite hex editor!
