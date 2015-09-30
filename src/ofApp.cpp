@@ -32,7 +32,7 @@ void ofApp::draw(){
             imgLoaded = true;
         }
     }else{
-        ofDrawBitmapString("jpg_viewer \n teddavis.org 2015 \n\n   for os x 10.10+ glitching \n    drag + drop jpg here \n\n      up/down keys = zoom \n       s = export ..._safe.png", 75,25);
+        ofDrawBitmapString("jpg_viewer \n teddavis.org 2015 \n\n   for os x 10.10+ glitching \n    drag + drop jpg here \n\n      up/down keys = zoom \n       s = export ..._safe.png \n       d = date export ..._%timestamp%.png", 75,25);
 
         for(int i=0;i<feedSize;i+=1){
             if(ofRandom(100)>feedRandom)
@@ -63,6 +63,10 @@ void ofApp::keyReleased(int key){
         //string imgExt = ofFilePath(loadPath);
         string savePath = ofFilePath::removeExt(loadPath);
         tmpImg.saveImage(savePath+"_safe.png");
+    }else if(key == 'd'){
+        string savePath = ofFilePath::removeExt(loadPath);
+        string sdate = ofGetTimestampString("%Y%m%d_%H%M%S%i");
+        tmpImg.saveImage(savePath+"_"+sdate+".png");
     }
 }
 
